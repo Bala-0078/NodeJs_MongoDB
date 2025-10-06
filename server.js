@@ -1,13 +1,17 @@
 const http=require('http')
+const fs=require('fs')
+const homePage=fs.readFileSync('index.html')
+const contactPage=fs.readFileSync('contact.html')
+const aboutpage=fs.readFileSync('about.html')
 const server = http.createServer((request,response)=>{
     if(request.url==="/"){
-        return response.end("THE HOME PAGE")
+        return response.end(homePage)
     }
     else if(request.url==="/contact"){
-        return response.end("THE CONTACT PAGE")
+        return response.end(contactPage)
     }
     else if(request.url==="/about"){
-        return response.end("THE ABOUT PAGE")
+        return response.end(aboutpage)
     }
     else{
         response.writeHead(404)
