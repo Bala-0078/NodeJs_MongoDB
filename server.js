@@ -1,9 +1,18 @@
+const path=require('path')
 const express=require('express')
 const app=express()
 app.listen(3000,()=>{
     console.log("server is running in port 3000")
 })
-
+app.get("/about",(request, response)=>{
+    response.sendFile(path.resolve(__dirname,'about.html'))
+})
+app.get("/contact",(request, response)=>{
+    response.sendFile(path.resolve(__dirname,'contact.html'))
+})
+app.get("/",(request, response)=>{
+    response.sendFile(path.resolve(__dirname,'index.html'))
+})
 
 
 
