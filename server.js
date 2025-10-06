@@ -1,3 +1,32 @@
+const express=require('express')
+const app=express()
+app.listen(3000,()=>{
+    console.log("server is running in port 3000")
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 const http=require('http')
 const fs=require('fs')
 const homePage=fs.readFileSync('index.html')
@@ -20,4 +49,5 @@ const server = http.createServer((request,response)=>{
     //console.log(request.url)
     //response.end("Hello node.js")
 })
-server.listen(3000)
+server.listen(3000)  
+*/
